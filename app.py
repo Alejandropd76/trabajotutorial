@@ -28,7 +28,7 @@ filtrado = df[df["color"].isin(colores) & df["fecha"].dt.year.isin(anios)]
 if filtrado.empty:
     st.warning("Selecciona al menos un color y un año.")
     st.stop()
-
+st.sidebar.image("autorojo.jpg", caption="Análisis de rendimiento", use_container_width=True
 # --- Métricas ---
 col1, col2 = st.columns(2)
 col1.metric("Total de autos vendidos", f"{filtrado['unidades'].sum():,}")
