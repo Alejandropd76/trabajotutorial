@@ -28,6 +28,7 @@ filtrado = df[df["color"].isin(colores) & df["fecha"].dt.year.isin(anios)]
 if filtrado.empty:
     st.warning("Selecciona al menos un color y un año.")
     st.stop()
+st.sidebar.title("Auto más vendido!")
 st.sidebar.image("autorojo.jpg", caption="Chevrolet Corsa 2026", use_container_width=True)
 # --- Métricas ---
 col1, col2 = st.columns(2)
