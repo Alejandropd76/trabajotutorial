@@ -19,7 +19,7 @@ st.sidebar.header("Filtros")
 colores = st.sidebar.multiselect(
     "Colores", sorted(df["color"].unique()), default=sorted(df["color"].unique())
 )
-anios = st.sidebar.multiselect(
+anios = st.sidebar.radio(
     "Años", sorted(df["fecha"].dt.year.unique()), default=sorted(df["fecha"].dt.year.unique())
 )
 
